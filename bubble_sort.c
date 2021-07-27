@@ -8,13 +8,11 @@
 
 // function for swapping the adjucent elements of the array
 // it takes the array name and indexs of the elements to be swapped
-
 int swap(int arr[], int i, int j) {
 
     int temp=0;
 
     // swapping using temp
-
     temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
@@ -23,7 +21,6 @@ int swap(int arr[], int i, int j) {
 
 // function for executing bubble sort 
 // it takes array and size of the array 
-
 void bubble_sort(int arr[], int n) {
 
     int i, j;
@@ -44,7 +41,6 @@ void bubble_sort(int arr[], int n) {
 
     // if there is no swapping in the array that means the array is sorted
     // no need to run the loop further so break the loop
-
 	if(!swapping) {
     
 	    break;
@@ -54,7 +50,6 @@ void bubble_sort(int arr[], int n) {
 }
 
 // function for generating random elements in array
-
 void random_inputs(int arr[], int n) {
     
     for(int i = 0; i < n; i++) {
@@ -63,7 +58,6 @@ void random_inputs(int arr[], int n) {
     }
     
     // for calculating the time taken for sorting 
-    
     struct timeval ti;
     gettimeofday(&ti , NULL);
     long starttime = ti.tv_sec *1000LL + ti.tv_usec/1000;
@@ -78,7 +72,6 @@ void random_inputs(int arr[], int n) {
 }
 
 // function for generating inputs in sorted order
-
 void sorted_inputs(int arr[], int n) {
     
     for(int i = 0; i < n; i++) {
@@ -100,7 +93,6 @@ void sorted_inputs(int arr[], int n) {
 }
 
 // function for generating inputs in reversed order
-
 void reverse_inputs(int arr[], int n) {
     
     for(int i = 0; i < n; i++) {
@@ -122,13 +114,11 @@ void reverse_inputs(int arr[], int n) {
 }
 
 // main function
-
 int main() {
 
     int n = 0;
     
     // asking the user for the size of the array
-    
     printf("Enter the no of elements\n");
     scanf("%d", &n);
     int arr[n];
@@ -138,6 +128,7 @@ int main() {
     
     // calling the function for generating inputs in sorted order
     sorted_inputs( arr, n);
+	
     // calling the function for generating inputs in reversed order
     reverse_inputs( arr, n);
 
